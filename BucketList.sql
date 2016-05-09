@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.7.9, for osx10.9 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.12, for osx10.11 (x86_64)
 --
 -- Host: localhost    Database: BucketList
 -- ------------------------------------------------------
@@ -24,11 +24,11 @@ DROP TABLE IF EXISTS `tbl_user`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tbl_user` (
   `user_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(45) DEFAULT NULL,
-  `user_username` varchar(45) DEFAULT NULL,
-  `user_password` varchar(45) DEFAULT NULL,
+  `user_name` varchar(255) DEFAULT NULL,
+  `user_username` varchar(255) DEFAULT NULL,
+  `user_password` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +37,7 @@ CREATE TABLE `tbl_user` (
 
 LOCK TABLES `tbl_user` WRITE;
 /*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
+INSERT INTO `tbl_user` VALUES (1,'Will','willtchiu@gmail.com','pbkdf2:sha1:1000$Lj8I0Phm$d06111c183bc9096008bd900ed2c13441a95c964');
 /*!40000 ALTER TABLE `tbl_user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-07 20:02:31
+-- Dump completed on 2016-05-09  1:54:14
